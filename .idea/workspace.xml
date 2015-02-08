@@ -49,46 +49,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cebb6928-5e67-4244-852e-ecce494f56d4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/Views/VideoFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_video.xml" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug\com\barbanyaga\androiddisplay\BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug\com\barbanyaga\androiddisplay\MainDisplayActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug\com\barbanyaga\androiddisplay\MainDisplayActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug\com\barbanyaga\androiddisplay\MainDisplayActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug\com\barbanyaga\androiddisplay\MainDisplayActivity$4.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug\com\barbanyaga\androiddisplay\MainDisplayActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug\com\barbanyaga\androiddisplay\R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug\com\barbanyaga\androiddisplay\R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug\com\barbanyaga\androiddisplay\R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug\com\barbanyaga\androiddisplay\R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug\com\barbanyaga\androiddisplay\R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug\com\barbanyaga\androiddisplay\R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug\com\barbanyaga\androiddisplay\R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug\com\barbanyaga\androiddisplay\R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug\com\barbanyaga\androiddisplay\R.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug\com\barbanyaga\androiddisplay\util\SystemUiHider$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug\com\barbanyaga\androiddisplay\util\SystemUiHider$OnVisibilityChangeListener.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug\com\barbanyaga\androiddisplay\util\SystemUiHider.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug\com\barbanyaga\androiddisplay\util\SystemUiHiderBase.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug\com\barbanyaga\androiddisplay\util\SystemUiHiderHoneycomb$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug\com\barbanyaga\androiddisplay\util\SystemUiHiderHoneycomb.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\dex\debug\classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\aidl\android\support\v4\app\INotificationSideChannel.aidl" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\pre-dexed\debug\classes-b877a495528f638c997dd857bc03f0024a9aed68.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-def24848383ed309e6546dfa70d27238193ff2c8.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-41225d41ea8173de5208f17b62b51a8a66ce27aa.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\tmp\dex\debug\inputList.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/Views/CreepingTextFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/Views/CreepingTextFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/Views/HtmlTextFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/Views/HtmlTextFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/barbanyaga/androiddisplay/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/barbanyaga/androiddisplay/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main_display.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main_display.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_creeping_text.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_creeping_text.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/Views/VideoFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/Views/VideoFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_video.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_video.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AndroidDisplay.iws" />
@@ -112,16 +76,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="VideoFragment.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="VideoFragment.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/Views/VideoFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1530">
-              <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
-              <folding>
-                <element signature="e#1278#1475#0" expanded="true" />
-                <element signature="e#1464#1465#0" expanded="true" />
-                <element signature="e#2881#2900#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.081330866" vertical-offset="738" max-vertical-offset="1547">
+              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_video.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_video.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.444445" vertical-offset="0" max-vertical-offset="391">
+              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+              <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -131,19 +114,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-9.185185" vertical-offset="58" max-vertical-offset="782">
               <caret line="18" column="47" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fragment_video.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_video.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65867156" vertical-offset="0" max-vertical-offset="542">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -776,12 +746,12 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_html_text.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/MainDisplayActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_creeping_text.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/Views/HtmlTextFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/Views/CreepingTextFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main_display.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/Views/VideoFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_video.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/Views/VideoFragment.java" />
       </list>
     </option>
   </component>
@@ -1168,7 +1138,11 @@
       <created>1423309675485</created>
       <updated>1423309675485</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Видео">
+      <created>1423387987410</created>
+      <updated>1423387987410</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1185,7 +1159,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3359288" sideWeight="0.18390192" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1228,19 +1202,26 @@
     <MESSAGE value="initial23434" />
     <MESSAGE value="тест" />
     <MESSAGE value="123123123123" />
-    <option name="LAST_COMMIT_MESSAGE" value="123123123123" />
+    <MESSAGE value="Видео" />
+    <option name="LAST_COMMIT_MESSAGE" value="Видео" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/Views/VideoFragment.java</url>
-          <line>56</line>
+          <line>59</line>
           <properties />
-          <option name="timeStamp" value="15" />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/Views/VideoFragment.java</url>
+          <line>54</line>
+          <properties />
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="16" />
+      <option name="time" value="20" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1627,14 +1608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62271065" vertical-offset="0" max-vertical-offset="561">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/Views/CreepingTextFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
@@ -1709,27 +1682,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/Views/VideoFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1530">
-          <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
-          <folding>
-            <element signature="e#1278#1475#0" expanded="true" />
-            <element signature="e#1464#1465#0" expanded="true" />
-            <element signature="e#2881#2900#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_video.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65867156" vertical-offset="0" max-vertical-offset="542">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state vertical-scroll-proportion="-9.444445" vertical-offset="0" max-vertical-offset="391">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
           <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/Views/VideoFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.081330866" vertical-offset="738" max-vertical-offset="1547">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

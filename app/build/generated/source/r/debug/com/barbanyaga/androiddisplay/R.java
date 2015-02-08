@@ -26,7 +26,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class id {
         public static final int WebViewContent=0x7f070005;
-        public static final int button_play_video=0x7f070007;
         public static final int creeping_text_fragment=0x7f070003;
         public static final int creeping_text_view=0x7f070004;
         public static final int fullscreen_content=0x7f070000;

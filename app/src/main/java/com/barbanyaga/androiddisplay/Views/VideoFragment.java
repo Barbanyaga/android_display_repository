@@ -1,6 +1,7 @@
 package com.barbanyaga.androiddisplay.Views;
 
 
+import android.content.res.Resources;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -14,12 +15,15 @@ import android.widget.Toast;
 
 import com.barbanyaga.androiddisplay.R;
 
+import java.io.File;
 import java.io.IOException;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
+
+    private String filePath = "/sdcard/Movies/Sample.mp4";
 
     private MediaPlayer mediaPlayer = null;
     private SurfaceView surfaceView = null;
@@ -34,28 +38,27 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_video, container, false);
-        mediaPlayer = new MediaPlayer();
-        surfaceView = (SurfaceView) view.findViewById(R.id.video_surface_view);
-        button_play_video = (Button) view.findViewById(R.id.button_play_video);
-        button_play_video.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getActivity(), "Clicked!", Toast.LENGTH_LONG);
-            }
-        });
 
+        surfaceView = (SurfaceView) view.findViewById(R.id.video_surface_view);
         holder = surfaceView.getHolder();
         holder.addCallback(this);
 
-        return inflater.inflate(R.layout.fragment_video, container, false);
+        mediaPlayer = new MediaPlayer();
+
+        return view;
     }
 
 
     @Override
     public void surfaceCreated(SurfaceHolder surfaceHolder) {
         try {
-            mediaPlayer.setDataSource("/sdcard/someVideo.mp4");
+            File file = new File(filePath);
+            if (!file.exists()) {
+                throw new Resources.NotFoundException("Файл не найден!");
+            }
 
+            mediaPlayer.setDataSource(filePath);
+            mediaPlayer.setDisplay(holder);
             mediaPlayer.prepare();
 
             //Get the dimensions of the video
@@ -81,7 +84,7 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
             //Start video
             mediaPlayer.start();
         } catch (IOException e) {
-            Toast.makeText(getActivity(), R.string.error_play, Toast.LENGTH_LONG);
+            Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 
