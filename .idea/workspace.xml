@@ -85,8 +85,8 @@
       <file leaf-file-name="fragment_video.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_video.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4704797" vertical-offset="0" max-vertical-offset="542">
-              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.31365314" vertical-offset="0" max-vertical-offset="542">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1168,7 +1168,11 @@
       <created>1423390507028</created>
       <updated>1423390507028</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Баннер в наложении&#10;">
+      <created>1423397655760</created>
+      <updated>1423397655760</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1229,7 +1233,8 @@
     <MESSAGE value="тест" />
     <MESSAGE value="123123123123" />
     <MESSAGE value="Видео" />
-    <option name="LAST_COMMIT_MESSAGE" value="Видео" />
+    <MESSAGE value="Баннер в наложении&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Баннер в наложении&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1726,8 +1731,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_video.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4704797" vertical-offset="0" max-vertical-offset="542">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.31365314" vertical-offset="0" max-vertical-offset="542">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
