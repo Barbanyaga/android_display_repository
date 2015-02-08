@@ -16,6 +16,10 @@ import com.barbanyaga.androiddisplay.R;
  */
 public class HtmlTextFragment extends Fragment {
 
+    //private String htmlText = "<html><head><link rel='stylesheet' type='text/css' href='http://www.robotsidekick.com/test.css?rev=0' /></head><body><h1>Hello World</h1></body></html>";
+    private String htmlText = "";
+
+
 
     public HtmlTextFragment() {
         // Required empty public constructor
@@ -28,8 +32,12 @@ public class HtmlTextFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_html_text, container, false);
 
         WebView webView = (WebView)view.findViewById(R.id.WebViewContent);
-        final String result = "<html><head><link rel='stylesheet' type='text/css' href='http://www.robotsidekick.com/test.css?rev=0' /></head><body><h1>Hello World</h1></body></html>";
-        webView.loadData(result, "text/html", Xml.Encoding.UTF_8.toString());
+        //webView.loadData(htmlText, "text/html", Xml.Encoding.UTF_8.toString());
+
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setBuiltInZoomControls(true);
+        webView.getSettings().setSupportZoom(true);
+        webView.loadUrl("http://m.lenta.ru/");
 
         return view;
     }
