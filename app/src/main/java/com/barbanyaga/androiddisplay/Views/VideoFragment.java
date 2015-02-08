@@ -60,6 +60,7 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
             mediaPlayer.setDataSource(filePath);
             mediaPlayer.setDisplay(holder);
             mediaPlayer.prepare();
+/*
 
             //Get the dimensions of the video
             int videoWidth = mediaPlayer.getVideoWidth();
@@ -80,6 +81,7 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
 
             //Commit the layout parameters
             surfaceView.setLayoutParams(lp);
+*/
 
             //Start video
             mediaPlayer.start();
