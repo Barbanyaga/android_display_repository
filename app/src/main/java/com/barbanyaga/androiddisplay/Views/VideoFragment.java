@@ -33,6 +33,7 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
     private SurfaceHolder holder = null;
     private Button button_play_video;
     private View view;
+    private PopupWindow popupWindowBanner;
 
     public VideoFragment() {
         // Required empty public constructor
@@ -55,13 +56,22 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
 
         mediaPlayer = new MediaPlayer();
 
+// Баннер
+        LayoutInflater inflater2 = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        popupWindowBanner = new PopupWindow(inflater.inflate(R.layout.piece_banner_sample, null, false), 500, 500, true);
+
         return view;
     }
 
+    Boolean bannerIsShowed = false;
     private void clickSurface(View x) {
-        LayoutInflater inflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        PopupWindow pw = new PopupWindow(inflater.inflate(R.layout.piece_banner_sample, null, false),500,500, true);
-        pw.showAtLocation(view, Gravity.LEFT, 0, 0);
+        if(!bannerIsShowed) {
+            popupWindowBanner.showAtLocation(view, Gravity.LEFT, 0, 0);
+            bannerIsShowed = true;
+        }else{
+            popupWindowBanner.dismiss();
+            bannerIsShowed = false;
+        }
     }
 
 
