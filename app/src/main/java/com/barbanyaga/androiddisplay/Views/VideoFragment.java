@@ -1,16 +1,19 @@
 package com.barbanyaga.androiddisplay.Views;
 
 
+import android.content.Context;
 import android.content.res.Resources;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.PopupWindow;
 import android.widget.Toast;
 
 import com.barbanyaga.androiddisplay.R;
@@ -29,6 +32,7 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
     private SurfaceView surfaceView = null;
     private SurfaceHolder holder = null;
     private Button button_play_video;
+    private View view;
 
     public VideoFragment() {
         // Required empty public constructor
@@ -37,15 +41,27 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_video, container, false);
+         view = inflater.inflate(R.layout.fragment_video, container, false);
 
         surfaceView = (SurfaceView) view.findViewById(R.id.video_surface_view);
+        surfaceView.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clickSurface(view);
+            }
+        });
         holder = surfaceView.getHolder();
         holder.addCallback(this);
 
         mediaPlayer = new MediaPlayer();
 
         return view;
+    }
+
+    private void clickSurface(View x) {
+        LayoutInflater inflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        PopupWindow pw = new PopupWindow(inflater.inflate(R.layout.piece_banner_sample, null, false),500,500, true);
+        pw.showAtLocation(view, Gravity.LEFT, 0, 0);
     }
 
 
