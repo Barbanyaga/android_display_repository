@@ -13,6 +13,7 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.Toast;
 
@@ -34,6 +35,7 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
     private Button button_play_video;
     private View view;
     private PopupWindow popupWindowBanner;
+    private ImageView bannerImage;
 
     public VideoFragment() {
         // Required empty public constructor
@@ -58,7 +60,17 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
 
 // Баннер
         LayoutInflater inflater2 = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View bannerView = inflater.inflate(R.layout.piece_banner_sample, null, false);
         popupWindowBanner = new PopupWindow(inflater.inflate(R.layout.piece_banner_sample, null, false), 500, 500, true);
+
+        bannerImage = (ImageView)bannerView.findViewById(R.id.banner_image);
+        bannerImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                popupWindowBanner.dismiss();
+                bannerIsShowed = false;
+            }
+        });
 
         return view;
     }
