@@ -50,7 +50,7 @@ public class MainDisplayActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main_display);
+        setContentView(R.layout.activity_dynamic_main_display);
 
         final View contentView = findViewById(R.id.fullscreen_content);
 

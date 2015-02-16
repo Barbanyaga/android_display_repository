@@ -37,11 +37,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int video_surface_view=0x7f070006;
     }
     public static final class layout {
-        public static final int activity_main_display=0x7f030000;
-        public static final int fragment_creeping_text=0x7f030001;
-        public static final int fragment_html_text=0x7f030002;
-        public static final int fragment_video=0x7f030003;
-        public static final int piece_banner_sample=0x7f030004;
+        public static final int activity_dynamic_main_display=0x7f030000;
+        public static final int activity_main_display=0x7f030001;
+        public static final int fragment_creeping_text=0x7f030002;
+        public static final int fragment_html_text=0x7f030003;
+        public static final int fragment_video=0x7f030004;
+        public static final int piece_banner_sample=0x7f030005;
     }
     public static final class string {
         public static final int app_name=0x7f050000;

@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    android:orientation="vertical"
+    android:id="@+id/fullscreen_content"
+    tools:context=".MainDisplayActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0px"
+            android:layout_weight="7"
+            android:layout_height="match_parent">
+            <fragment
+                android:id="@+id/video_fragment"
+                android:name="com.barbanyaga.androiddisplay.Views.VideoFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout="@layout/fragment_video" />
+
+            <fragment
+                android:name="com.barbanyaga.androiddisplay.Views.CreepingTextFragment"
+                android:layout_width="match_parent"
+                android:layout_marginTop="-50dp"
+                android:layout_height="50dp"
+                android:id="@+id/creeping_text_fragment"
+                tools:layout="@layout/fragment_creeping_text" />
+        </LinearLayout>
+
+        <fragment
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:name="com.barbanyaga.androiddisplay.Views.HtmlTextFragment"
+            android:id="@+id/html_text_fragment"
+            tools:layout="@layout/fragment_html_text" />
+    </LinearLayout>
+</LinearLayout>
