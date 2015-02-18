@@ -1,5 +1,7 @@
 package com.barbanyaga.androiddisplay;
 
+import com.barbanyaga.androiddisplay.ContentPackManagment.ContentPack;
+import com.barbanyaga.androiddisplay.ContentPackManagment.ContentPackInflater;
 import com.barbanyaga.androiddisplay.util.SystemUiHider;
 
 import android.annotation.TargetApi;
@@ -9,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.RelativeLayout;
 
 
 /**
@@ -53,6 +56,11 @@ public class MainDisplayActivity extends Activity {
         setContentView(R.layout.activity_dynamic_main_display);
 
         final View contentView = findViewById(R.id.fullscreen_content);
+        final RelativeLayout mainDisplayLayout = (RelativeLayout) findViewById(R.id.main_display_layout);
+
+        ContentPack contentPack = new ContentPack();
+        ContentPackInflater.getInstance(this, mainDisplayLayout, contentPack).inflate();
+
 
         // Set up an instance of SystemUiHider to control the system UI for
         // this activity.

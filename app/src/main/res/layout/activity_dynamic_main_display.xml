@@ -8,6 +8,7 @@
     tools:context=".MainDisplayActivity">
 
     <RelativeLayout
+        android:id="@+id/main_display_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -20,14 +21,14 @@
             android:layout_width="1280px"
             android:layout_height="1200px" />
 
-        <fragment
+<!--        <fragment
             android:name="com.barbanyaga.androiddisplay.Views.CreepingTextFragment"
             android:id="@+id/creeping_text_fragment"
             tools:layout="@layout/fragment_creeping_text"
             android:layout_marginTop="1080px"
             android:layout_marginLeft="20px"
             android:layout_width="1290px"
-            android:layout_height="70px" />
+            android:layout_height="70px" />-->
 
         <fragment
             android:name="com.barbanyaga.androiddisplay.Views.HtmlTextFragment"
