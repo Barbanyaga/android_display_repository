@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
+import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.CreepingText;
 import com.barbanyaga.androiddisplay.R;
 import com.barbanyaga.androiddisplay.Views.CreepingTextFragment;
 
@@ -17,59 +18,49 @@ import com.barbanyaga.androiddisplay.Views.CreepingTextFragment;
  */
 public class ContentPackInflater {
 
+    private final FragmentTransaction fragmentTransaction;
     private Activity activity;
     private ContentPack contentPack;
     private RelativeLayout mainRelativeLayout;
 
-    public static ContentPackInflater getInstance(Activity activity, RelativeLayout mainDisplayLayout, ContentPack contentPack) {
-        ContentPackInflater inflater = new ContentPackInflater();
-        inflater.setMainRelativeLayout(mainDisplayLayout);
-        inflater.setContentPack(contentPack);
-        inflater.setActivity(activity);
-        return inflater;
-    }
-
-    public void setContentPack(ContentPack contentPack) {
+    public ContentPackInflater(Activity activity, RelativeLayout mainDisplayLayout, ContentPack contentPack) {
+        this.mainRelativeLayout = mainDisplayLayout;
         this.contentPack = contentPack;
-    }
-
-    public ContentPack getContentPack() {
-        return contentPack;
-    }
-
-    public void setMainRelativeLayout(RelativeLayout mainRelativeLayout) {
-        this.mainRelativeLayout = mainRelativeLayout;
-    }
-
-    public RelativeLayout getMainRelativeLayout() {
-        return mainRelativeLayout;
+        this.activity = activity;
+        this.fragmentTransaction = activity.getFragmentManager().beginTransaction();
     }
 
     public void inflate() {
 
-        // Create creeping text
-        FrameLayout frameLayout = new FrameLayout(activity);
-        frameLayout.setId(R.id.CREEPING_TEXT_FRAGMENT);
-        RelativeLayout.LayoutParams creepingLayoutsParams = new RelativeLayout.LayoutParams(1290, 70);
-        creepingLayoutsParams.leftMargin = 20;
-        creepingLayoutsParams.topMargin = 1080;
-        mainRelativeLayout.addView(frameLayout, creepingLayoutsParams);
+        // add creeping text
+        for (CreepingText ct : contentPack.creepingTextList) {
+            addCreepingTextFragment(ct);
+        }
 
-        CreepingTextFragment creepingTextFragment = new CreepingTextFragment();
-
-        FragmentTransaction fragmentTransaction = activity.getFragmentManager().beginTransaction();
-        fragmentTransaction.add(R.id.CREEPING_TEXT_FRAGMENT, creepingTextFragment)
+        fragmentTransaction
                 .commit();
 
 //        RelativeLayout.LayoutParams creepingLayoutsParams = new RelativeLayout.LayoutParams(1290, 70);
 //        creepingLayoutsParams.setMargins(20, 1080, 0, 0);
     }
 
-    public void setActivity(Activity activity) {
-        this.activity = activity;
-    }
+    /**
+     * Add creeping text fragment on layout
+     *
+     * @param creepingText
+     * @return
+     */
+    private ContentPackInflater addCreepingTextFragment(CreepingText creepingText) {
+        FrameLayout frameLayout = new FrameLayout(activity);
+        frameLayout.setId(R.id.CREEPING_TEXT_FRAGMENT);
+        RelativeLayout.LayoutParams creepingLayoutsParams = new RelativeLayout.LayoutParams(creepingText.getWidth(), creepingText.getHeight());
+        creepingLayoutsParams.leftMargin = creepingText.getMarginLeft();
+        creepingLayoutsParams.topMargin = creepingText.getMarginTop();
+        mainRelativeLayout.addView(frameLayout, creepingLayoutsParams);
 
-    public Activity getActivity() {
-        return activity;
+        CreepingTextFragment creepingTextFragment = new CreepingTextFragment();
+
+        fragmentTransaction.add(R.id.CREEPING_TEXT_FRAGMENT, creepingTextFragment);
+        return this;
     }
 }
