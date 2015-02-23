@@ -30,10 +30,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int WebViewContent=0x7f050007;
         public static final int banner_button=0x7f05000a;
         public static final int banner_image=0x7f050009;
-        public static final int creeping_text_fragment=0x7f050005;
+        public static final int creeping_text_fragment=0x7f050004;
         public static final int creeping_text_view=0x7f050006;
         public static final int fullscreen_content=0x7f050001;
-        public static final int html_text_fragment=0x7f050004;
+        public static final int html_text_fragment=0x7f050005;
         public static final int main_display_layout=0x7f050002;
         public static final int video_fragment=0x7f050003;
         public static final int video_surface_view=0x7f050008;

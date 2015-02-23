@@ -1,16 +1,15 @@
 package com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives;
 
-import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.FragmentType;
-
 /**
  * Created by barbanyaga on 21.02.2015.
  */
-public class BasePrimitive implements IDisplayable {
+public class BasePrimitiveElement implements IDisplayable {
     protected int MarginTop;
     protected int MarginLeft;
     protected int Width;
     protected int Height;
     protected int ZIndex;
+    protected DisplayElementType elementType;
 
     public int getMarginTop() {
         return MarginTop;
@@ -50,5 +49,9 @@ public class BasePrimitive implements IDisplayable {
 
     public void setZIndex(int ZIndex) {
         this.ZIndex = ZIndex;
+    }
+
+    public DisplayElementType getElementType() {
+        return elementType;
     }
 }

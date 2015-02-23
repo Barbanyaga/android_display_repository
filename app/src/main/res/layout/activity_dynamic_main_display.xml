@@ -11,36 +11,36 @@
         android:id="@+id/main_display_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <!--
+                <fragment
+                    android:id="@+id/video_fragment"
+                    android:name="com.barbanyaga.androiddisplay.Views.VideoFragment"
+                    tools:layout="@layout/fragment_video"
+                    android:layout_marginTop="35px"
+                    android:layout_marginLeft="15px"
+                    android:layout_width=0px"
+                    android:layout_height="1200px" />
 
-        <fragment
-            android:id="@+id/video_fragment"
-            android:name="com.barbanyaga.androiddisplay.Views.VideoFragment"
-            tools:layout="@layout/fragment_video"
-            android:layout_marginTop="35px"
-            android:layout_marginLeft="15px"
-            android:layout_width="1280px"
-            android:layout_height="1200px" />
+                <fragment
+                    android:name="com.barbanyaga.androiddisplay.Views.CreepingTextFragment"
+                    android:id="@+id/creeping_text_fragment"
+                    tools:layout="@layout/fragment_creeping_text"
+                    android:layout_marginTop="1080px"
+                    android:layout_marginLeft="20px"
+                    android:layout_width="1290px"
+                    android:layout_height="70px" />
 
-<!--        <fragment
-            android:name="com.barbanyaga.androiddisplay.Views.CreepingTextFragment"
-            android:id="@+id/creeping_text_fragment"
-            tools:layout="@layout/fragment_creeping_text"
-            android:layout_marginTop="1080px"
-            android:layout_marginLeft="20px"
-            android:layout_width="1290px"
-            android:layout_height="70px" />-->
+                <fragment
+                    android:name="com.barbanyaga.androiddisplay.Views.HtmlTextFragment"
+                    android:id="@+id/html_text_fragment"
+                    tools:layout="@layout/fragment_html_text"
+                    android:layout_marginTop="15px"
+                    android:layout_marginLeft="1300px"
+                    android:layout_width="600px"
+                    android:layout_height="1200px"
 
-        <fragment
-            android:name="com.barbanyaga.androiddisplay.Views.HtmlTextFragment"
-            android:id="@+id/html_text_fragment"
-            tools:layout="@layout/fragment_html_text"
-            android:layout_marginTop="15px"
-            android:layout_marginLeft="1300px"
-            android:layout_width="600px"
-            android:layout_height="1200px"
-
-            />
-
+                    />
+                -->
         android:layout_width=""
     </RelativeLayout>
 </LinearLayout>

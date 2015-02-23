@@ -1,6 +1,7 @@
 package com.barbanyaga.androiddisplay.ContentPackManagment;
 
-import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.CreepingText;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.BasePrimitiveElement;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.CreepingTextElement;
 
 import java.util.ArrayList;
 
@@ -9,5 +10,5 @@ import java.util.ArrayList;
  * ContentPack contains presentation of content xml-describe file
  */
 public class ContentPack {
-    public ArrayList<CreepingText> creepingTextList = new ArrayList<CreepingText>();
+    public ArrayList<BasePrimitiveElement> displayElements = new ArrayList<BasePrimitiveElement>();
 }

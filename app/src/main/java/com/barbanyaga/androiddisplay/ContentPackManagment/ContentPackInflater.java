@@ -3,14 +3,18 @@ package com.barbanyaga.androiddisplay.ContentPackManagment;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
-import android.view.ViewGroup;
-import android.widget.EditText;
+import android.support.annotation.IdRes;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
-import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.CreepingText;
-import com.barbanyaga.androiddisplay.R;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.BasePrimitiveElement;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.CreepingTextElement;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.DisplayElementType;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.IDisplayable;
 import com.barbanyaga.androiddisplay.Views.CreepingTextFragment;
+import com.barbanyaga.androiddisplay.Views.HtmlTextFragment;
+import com.barbanyaga.androiddisplay.Views.VideoFragment;
 
 /**
  * Created by barbanyaga on 18.02.2015.
@@ -33,8 +37,10 @@ public class ContentPackInflater {
     public void inflate() {
 
         // add creeping text
-        for (CreepingText ct : contentPack.creepingTextList) {
-            addCreepingTextFragment(ct);
+        for (BasePrimitiveElement ct : contentPack.displayElements) {
+
+
+            addDisplayFragment(ct);
         }
 
         fragmentTransaction
@@ -47,20 +53,46 @@ public class ContentPackInflater {
     /**
      * Add creeping text fragment on layout
      *
-     * @param creepingText
+     * @param element
      * @return
      */
-    private ContentPackInflater addCreepingTextFragment(CreepingText creepingText) {
-        FrameLayout frameLayout = new FrameLayout(activity);
-        frameLayout.setId(R.id.CREEPING_TEXT_FRAGMENT);
-        RelativeLayout.LayoutParams creepingLayoutsParams = new RelativeLayout.LayoutParams(creepingText.getWidth(), creepingText.getHeight());
-        creepingLayoutsParams.leftMargin = creepingText.getMarginLeft();
-        creepingLayoutsParams.topMargin = creepingText.getMarginTop();
-        mainRelativeLayout.addView(frameLayout, creepingLayoutsParams);
+    private ContentPackInflater addDisplayFragment(BasePrimitiveElement element) {
 
-        CreepingTextFragment creepingTextFragment = new CreepingTextFragment();
+        int newId = View.generateViewId();
+        addFrameLayout(newId, element);
 
-        fragmentTransaction.add(R.id.CREEPING_TEXT_FRAGMENT, creepingTextFragment);
+        Fragment fragment = null;
+
+        switch (element.getElementType()) {
+            case CreepingText:
+                fragment = new CreepingTextFragment();
+                break;
+            case HtmlText:
+                fragment = new HtmlTextFragment();
+                break;
+            case Video:
+                fragment = new VideoFragment();
+                break;
+        }
+
+        if (fragment != null) {
+            fragmentTransaction.add(newId, fragment);
+        }
+
         return this;
+    }
+
+    /**
+     * Add frame with specific Id
+     *
+     * @param id
+     */
+    private void addFrameLayout(@IdRes int id, IDisplayable element) {
+        FrameLayout frameLayout = new FrameLayout(activity);
+        frameLayout.setId(id);
+        RelativeLayout.LayoutParams creepingLayoutsParams = new RelativeLayout.LayoutParams(element.getWidth(), element.getHeight());
+        creepingLayoutsParams.leftMargin = element.getMarginLeft();
+        creepingLayoutsParams.topMargin = element.getMarginTop();
+        mainRelativeLayout.addView(frameLayout, creepingLayoutsParams);
     }
 }

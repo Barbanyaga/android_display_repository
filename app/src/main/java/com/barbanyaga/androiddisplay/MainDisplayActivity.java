@@ -2,7 +2,9 @@ package com.barbanyaga.androiddisplay;
 
 import com.barbanyaga.androiddisplay.ContentPackManagment.ContentPack;
 import com.barbanyaga.androiddisplay.ContentPackManagment.ContentPackInflater;
-import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.CreepingText;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.CreepingTextElement;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.HtmlTextElement;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.VideoElement;
 import com.barbanyaga.androiddisplay.util.SystemUiHider;
 
 import android.annotation.TargetApi;
@@ -60,9 +62,14 @@ public class MainDisplayActivity extends Activity {
         final RelativeLayout mainDisplayLayout = (RelativeLayout) findViewById(R.id.main_display_layout);
 
         ContentPack contentPack = new ContentPack();
-        contentPack.creepingTextList.add(new CreepingText("Проверка бегущей строки", 20, 1080, 1290, 70, 0));
+        contentPack.displayElements.add(new VideoElement(15, 35, 1285, 1200, 0));
+        contentPack.displayElements.add(new CreepingTextElement("Проверка бегущей строки", 20, 1080, 1290, 70, 0));
+        contentPack.displayElements.add(new HtmlTextElement(1300, 15, 600, 1200, 0));
+
         ContentPackInflater contentPackInflater = new ContentPackInflater(this, mainDisplayLayout, contentPack);
         contentPackInflater.inflate();
+
+
 
         // Set up an instance of SystemUiHider to control the system UI for
         // this activity.

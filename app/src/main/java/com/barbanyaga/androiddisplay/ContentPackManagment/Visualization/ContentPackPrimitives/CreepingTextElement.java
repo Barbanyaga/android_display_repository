@@ -3,7 +3,8 @@ package com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.Content
 /**
  * Created by barbanyaga on 21.02.2015.
  */
-public class CreepingText extends BasePrimitive
+public class CreepingTextElement
+        extends BasePrimitiveElement
 {
     private String text;
 
@@ -15,12 +16,13 @@ public class CreepingText extends BasePrimitive
         this.text = text;
     }
 
-    public CreepingText(String text, int marginLeft, int marginTop,  int width, int height, int ZIndex) {
+    public CreepingTextElement(String text, int marginLeft, int marginTop, int width, int height, int ZIndex) {
         this.text = text;
         MarginTop = marginTop;
         MarginLeft = marginLeft;
         Width = width;
         Height = height;
         this.ZIndex = ZIndex;
+        elementType = DisplayElementType.CreepingText;
     }
 }
