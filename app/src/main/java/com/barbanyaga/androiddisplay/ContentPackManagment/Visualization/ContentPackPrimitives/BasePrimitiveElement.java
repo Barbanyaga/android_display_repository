@@ -8,6 +8,7 @@ public class BasePrimitiveElement implements IDisplayable {
     protected int MarginLeft;
     protected int Width;
     protected int Height;
+    protected Boolean visible = true;
     protected int ZIndex;
     protected DisplayElementType elementType;
 
@@ -43,6 +44,18 @@ public class BasePrimitiveElement implements IDisplayable {
         Height = height;
     }
 
+    public DisplayElementType getElementType() {
+        return elementType;
+    }
+
+    public Boolean getVisible() {
+        return visible;
+    }
+
+    public void setVisible(Boolean visible) {
+        this.visible = visible;
+    }
+
     public int getZIndex() {
         return ZIndex;
     }
@@ -51,7 +64,5 @@ public class BasePrimitiveElement implements IDisplayable {
         this.ZIndex = ZIndex;
     }
 
-    public DisplayElementType getElementType() {
-        return elementType;
-    }
+
 }

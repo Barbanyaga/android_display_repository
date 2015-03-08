@@ -3,6 +3,8 @@ package com.barbanyaga.androiddisplay.Views;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -27,8 +29,6 @@ import java.io.IOException;
  */
 public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
 
-    private String filePath = "/sdcard/Movies/Sample.mp4";
-
     private MediaPlayer mediaPlayer = null;
     private SurfaceView surfaceView = null;
     private SurfaceHolder holder = null;
@@ -36,6 +36,7 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
     private View view;
     private PopupWindow popupWindowBanner;
     private ImageView bannerImage;
+    private String pathToFile = "/sdcard/Movies/Sample.mp4";
 
     public VideoFragment() {
         // Required empty public constructor
@@ -44,10 +45,10 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-         view = inflater.inflate(R.layout.fragment_video, container, false);
+        view = inflater.inflate(R.layout.fragment_video, container, false);
 
         surfaceView = (SurfaceView) view.findViewById(R.id.video_surface_view);
-        surfaceView.setOnClickListener( new View.OnClickListener() {
+        surfaceView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 clickSurface(view);
@@ -63,7 +64,7 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
         View bannerView = inflater.inflate(R.layout.piece_banner_sample, null, false);
         popupWindowBanner = new PopupWindow(inflater.inflate(R.layout.piece_banner_sample, null, false), 500, 500, true);
 
-        bannerImage = (ImageView)bannerView.findViewById(R.id.banner_image);
+        bannerImage = (ImageView) bannerView.findViewById(R.id.banner_image);
         bannerImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -76,11 +77,14 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
     }
 
     Boolean bannerIsShowed = false;
+
     private void clickSurface(View x) {
-        if(!bannerIsShowed) {
+        if (!bannerIsShowed) {
             popupWindowBanner.showAtLocation(view, Gravity.LEFT, 0, 0);
+            popupWindowBanner.setBackgroundDrawable(new ColorDrawable(Color.GREEN));
+            popupWindowBanner.update(50, 50, 300, 80);
             bannerIsShowed = true;
-        }else{
+        } else {
             popupWindowBanner.dismiss();
             bannerIsShowed = false;
         }
@@ -90,14 +94,17 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
     @Override
     public void surfaceCreated(SurfaceHolder surfaceHolder) {
         try {
-            File file = new File(filePath);
+            File file = new File(pathToFile);
             if (!file.exists()) {
                 throw new Resources.NotFoundException("Файл не найден!");
             }
 
-            mediaPlayer.setDataSource(filePath);
+            mediaPlayer.setDataSource(pathToFile);
             mediaPlayer.setDisplay(holder);
             mediaPlayer.prepare();
+
+            mediaPlayer.seekTo(8*60*1000);
+
 /*
 
             //Get the dimensions of the video
@@ -136,5 +143,13 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
     @Override
     public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
 
+    }
+
+    public void setPathToFile(String pathToFile) {
+        this.pathToFile = pathToFile;
+    }
+
+    public String getPathToFile() {
+        return pathToFile;
     }
 }

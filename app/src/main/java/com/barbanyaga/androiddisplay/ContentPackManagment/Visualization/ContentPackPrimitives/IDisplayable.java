@@ -25,4 +25,8 @@ public interface IDisplayable {
     public int getZIndex() ;
 
     public void setZIndex(int ZIndex) ;
+
+    public Boolean getVisible();
+
+    public void setVisible(Boolean visible);
 }

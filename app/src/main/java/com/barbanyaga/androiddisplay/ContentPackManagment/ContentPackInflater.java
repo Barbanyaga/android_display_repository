@@ -9,9 +9,8 @@ import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
 import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.BasePrimitiveElement;
-import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.CreepingTextElement;
-import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.DisplayElementType;
 import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.IDisplayable;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.VideoElement;
 import com.barbanyaga.androiddisplay.Views.CreepingTextFragment;
 import com.barbanyaga.androiddisplay.Views.HtmlTextFragment;
 import com.barbanyaga.androiddisplay.Views.VideoFragment;
@@ -38,8 +37,6 @@ public class ContentPackInflater {
 
         // add creeping text
         for (BasePrimitiveElement ct : contentPack.displayElements) {
-
-
             addDisplayFragment(ct);
         }
 
@@ -71,7 +68,10 @@ public class ContentPackInflater {
                 fragment = new HtmlTextFragment();
                 break;
             case Video:
-                fragment = new VideoFragment();
+                VideoElement videoElement = (VideoElement) element;
+                VideoFragment newVideoFragment = new VideoFragment();
+                newVideoFragment.setPathToFile(videoElement.getPathToFile());
+                fragment = newVideoFragment;
                 break;
         }
 
@@ -90,6 +90,7 @@ public class ContentPackInflater {
     private void addFrameLayout(@IdRes int id, IDisplayable element) {
         FrameLayout frameLayout = new FrameLayout(activity);
         frameLayout.setId(id);
+        frameLayout.setVisibility(element.getVisible() ? View.VISIBLE : View.GONE);
         RelativeLayout.LayoutParams creepingLayoutsParams = new RelativeLayout.LayoutParams(element.getWidth(), element.getHeight());
         creepingLayoutsParams.leftMargin = element.getMarginLeft();
         creepingLayoutsParams.topMargin = element.getMarginTop();

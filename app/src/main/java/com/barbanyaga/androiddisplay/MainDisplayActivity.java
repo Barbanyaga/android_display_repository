@@ -2,6 +2,7 @@ package com.barbanyaga.androiddisplay;
 
 import com.barbanyaga.androiddisplay.ContentPackManagment.ContentPack;
 import com.barbanyaga.androiddisplay.ContentPackManagment.ContentPackInflater;
+import com.barbanyaga.androiddisplay.ContentPackManagment.DisplayManager;
 import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.CreepingTextElement;
 import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.HtmlTextElement;
 import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.VideoElement;
@@ -51,6 +52,7 @@ public class MainDisplayActivity extends Activity {
      * The instance of the {@link SystemUiHider} for this activity.
      */
     private SystemUiHider mSystemUiHider;
+    private DisplayManager mDisplayManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,16 +62,14 @@ public class MainDisplayActivity extends Activity {
 
         final View contentView = findViewById(R.id.fullscreen_content);
         final RelativeLayout mainDisplayLayout = (RelativeLayout) findViewById(R.id.main_display_layout);
+        mDisplayManager = new DisplayManager(this, mainDisplayLayout);
 
         ContentPack contentPack = new ContentPack();
-        contentPack.displayElements.add(new VideoElement(15, 35, 1285, 1200, 0));
-        contentPack.displayElements.add(new CreepingTextElement("Проверка бегущей строки", 20, 1080, 1290, 70, 0));
-        contentPack.displayElements.add(new HtmlTextElement(1300, 15, 600, 1200, 0));
+        contentPack.displayElements.add(new VideoElement("/sdcard/Movies/Life.Cycles.2010.1080p.Rus.Eng.mp4", 0, 60, 1920, 1080, 0));
+        contentPack.displayElements.add(new CreepingTextElement("Проверка бегущей строки", 20, 1080, 1920, 70, 0));
+        contentPack.displayElements.add(new HtmlTextElement(1700, 50, 600, 1200, 0));
 
-        ContentPackInflater contentPackInflater = new ContentPackInflater(this, mainDisplayLayout, contentPack);
-        contentPackInflater.inflate();
-
-
+        mDisplayManager.showContentPack(contentPack);
 
         // Set up an instance of SystemUiHider to control the system UI for
         // this activity.

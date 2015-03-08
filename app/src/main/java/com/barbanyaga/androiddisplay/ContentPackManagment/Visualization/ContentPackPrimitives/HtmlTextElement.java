@@ -11,5 +11,6 @@ public class HtmlTextElement extends BasePrimitiveElement {
         Height = height;
         this.ZIndex = ZIndex;
         elementType = DisplayElementType.HtmlText;
+        visible = true;
     }
 }
