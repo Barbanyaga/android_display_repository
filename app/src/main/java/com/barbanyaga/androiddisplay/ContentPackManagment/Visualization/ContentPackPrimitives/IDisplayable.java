@@ -1,7 +1,5 @@
 package com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives;
 
-import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.FragmentType;
-
 /**
  * Created by barbanyaga on 18.02.2015.
  */

@@ -23,6 +23,7 @@ import com.barbanyaga.androiddisplay.R;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -34,7 +35,6 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
     private SurfaceHolder holder = null;
     private Button button_play_video;
     private View view;
-    private PopupWindow popupWindowBanner;
     private ImageView bannerImage;
     private String pathToFile = "/sdcard/Movies/Sample.mp4";
 
@@ -48,12 +48,7 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
         view = inflater.inflate(R.layout.fragment_video, container, false);
 
         surfaceView = (SurfaceView) view.findViewById(R.id.video_surface_view);
-        surfaceView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                clickSurface(view);
-            }
-        });
+
         holder = surfaceView.getHolder();
         holder.addCallback(this);
 
@@ -61,35 +56,9 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
 
 // Баннер
         LayoutInflater inflater2 = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View bannerView = inflater.inflate(R.layout.piece_banner_sample, null, false);
-        popupWindowBanner = new PopupWindow(inflater.inflate(R.layout.piece_banner_sample, null, false), 500, 500, true);
-
-        bannerImage = (ImageView) bannerView.findViewById(R.id.banner_image);
-        bannerImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                popupWindowBanner.dismiss();
-                bannerIsShowed = false;
-            }
-        });
 
         return view;
     }
-
-    Boolean bannerIsShowed = false;
-
-    private void clickSurface(View x) {
-        if (!bannerIsShowed) {
-            popupWindowBanner.showAtLocation(view, Gravity.LEFT, 0, 0);
-            popupWindowBanner.setBackgroundDrawable(new ColorDrawable(Color.GREEN));
-            popupWindowBanner.update(50, 50, 300, 80);
-            bannerIsShowed = true;
-        } else {
-            popupWindowBanner.dismiss();
-            bannerIsShowed = false;
-        }
-    }
-
 
     @Override
     public void surfaceCreated(SurfaceHolder surfaceHolder) {
@@ -101,11 +70,11 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
 
             mediaPlayer.setDataSource(pathToFile);
             mediaPlayer.setDisplay(holder);
+
             mediaPlayer.prepare();
-
             mediaPlayer.seekTo(8*60*1000);
-
 /*
+ // Играемся с размером видео
 
             //Get the dimensions of the video
             int videoWidth = mediaPlayer.getVideoWidth();

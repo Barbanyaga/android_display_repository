@@ -1,8 +1,7 @@
 package com.barbanyaga.androiddisplay;
 
-import com.barbanyaga.androiddisplay.ContentPackManagment.ContentPack;
-import com.barbanyaga.androiddisplay.ContentPackManagment.ContentPackInflater;
-import com.barbanyaga.androiddisplay.ContentPackManagment.DisplayManager;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPack;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.DisplayManager;
 import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.CreepingTextElement;
 import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.HtmlTextElement;
 import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.VideoElement;

@@ -1,4 +1,4 @@
-package com.barbanyaga.androiddisplay.ContentPackManagment;
+package com.barbanyaga.androiddisplay.ContentPackManagment.Visualization;
 
 import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.BasePrimitiveElement;
 import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.CreepingTextElement;

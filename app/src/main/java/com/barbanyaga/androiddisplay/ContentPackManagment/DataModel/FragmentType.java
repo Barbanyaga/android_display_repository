@@ -1,4 +1,4 @@
-package com.barbanyaga.androiddisplay.ContentPackManagment.Visualization;
+package com.barbanyaga.androiddisplay.ContentPackManagment.DataModel;
 
 /**
  * Created by barbanyaga on 18.02.2015.

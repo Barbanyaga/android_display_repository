@@ -2,6 +2,13 @@
 <items version="2" >
 
     <item
+        jar="C:\Users\barbanyaga\.gradle\caches\modules-2\files-2.1\joda-time\joda-time\2.7\5599707a3eaad13e889f691b3af78c8c03842195\joda-time-2.7.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5599707a3eaad13e889f691b3af78c8c03842195">
+        <dex dex="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\pre-dexed\debug\joda-time-2.7-64af4e3c4743a93ae5570993bed90e957a103a84.jar" />
+    </item>
+    <item
         jar="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
