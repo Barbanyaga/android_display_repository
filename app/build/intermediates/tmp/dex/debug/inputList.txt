@@ -1,5 +1,6 @@
 D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\classes\debug
 D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-41225d41ea8173de5208f17b62b51a8a66ce27aa.jar
 D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-def24848383ed309e6546dfa70d27238193ff2c8.jar
+D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\pre-dexed\debug\simple-xml-2.7.1-7682581b09f6e029e26b5fa486e806ff2fea07c2.jar
 D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\pre-dexed\debug\classes-b877a495528f638c997dd857bc03f0024a9aed68.jar
 D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\pre-dexed\debug\joda-time-2.7-64af4e3c4743a93ae5570993bed90e957a103a84.jar

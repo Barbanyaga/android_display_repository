@@ -2,6 +2,20 @@
 <items version="2" >
 
     <item
+        jar="C:\Users\barbanyaga\.gradle\caches\modules-2\files-2.1\org.simpleframework\simple-xml\2.7.1\dd91fb744c2ff921407475cb29a1e3fee397d411\simple-xml-2.7.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dd91fb744c2ff921407475cb29a1e3fee397d411">
+        <dex dex="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\pre-dexed\debug\simple-xml-2.7.1-7682581b09f6e029e26b5fa486e806ff2fea07c2.jar" />
+    </item>
+    <item
+        jar="D:\Program Files\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.0\support-annotations-21.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e">
+        <dex dex="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-41225d41ea8173de5208f17b62b51a8a66ce27aa.jar" />
+    </item>
+    <item
         jar="C:\Users\barbanyaga\.gradle\caches\modules-2\files-2.1\joda-time\joda-time\2.7\5599707a3eaad13e889f691b3af78c8c03842195\joda-time-2.7.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -21,13 +35,6 @@
         revision="21.1.2"
         sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0">
         <dex dex="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-def24848383ed309e6546dfa70d27238193ff2c8.jar" />
-    </item>
-    <item
-        jar="D:\Program Files\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.0\support-annotations-21.0.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e">
-        <dex dex="D:\_WORK\_Moonlight\AndroidDisplay\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-41225d41ea8173de5208f17b62b51a8a66ce27aa.jar" />
     </item>
 
 </items>
