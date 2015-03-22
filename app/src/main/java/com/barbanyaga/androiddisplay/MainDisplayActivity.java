@@ -1,5 +1,9 @@
 package com.barbanyaga.androiddisplay;
 
+import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.FragmentDescription;
+import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.FrequencyConfig;
+import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.MasterProject;
+import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.Project;
 import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPack;
 import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.DisplayManager;
 import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.CreepingTextElement;
@@ -15,6 +19,13 @@ import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
+
+import org.simpleframework.xml.Serializer;
+import org.simpleframework.xml.core.Persister;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
 
 
 /**
@@ -56,6 +67,8 @@ public class MainDisplayActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        createSampleXml();
 
         setContentView(R.layout.activity_dynamic_main_display);
 
@@ -122,6 +135,40 @@ public class MainDisplayActivity extends Activity {
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
+    }
+
+    private void createSampleXml() {
+        try {
+            File file = new File("/sdcard/MediaBroadcast/Metadata.xml");
+
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+
+
+            Serializer serializer = new Persister();
+            MasterProject masterProject = new MasterProject();
+            masterProject.Projects = new ArrayList<Project>();
+            Project project1 = new Project();
+            masterProject.Projects.add(project1);
+            project1.fragmentDescriptions = new ArrayList<FragmentDescription>();
+            FrequencyConfig frequencyConfig1 = new FrequencyConfig();
+            project1.frequencyConfig = frequencyConfig1;
+            FragmentDescription fragmentDescription1 = new FragmentDescription();
+            fragmentDescription1.setX(100);
+            fragmentDescription1.setY(100);
+            fragmentDescription1.setWidth(200);
+            project1.fragmentDescriptions.add(fragmentDescription1);
+            fragmentDescription1.setX(350);
+            project1.fragmentDescriptions.add(fragmentDescription1);
+
+            serializer.write(masterProject, file);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

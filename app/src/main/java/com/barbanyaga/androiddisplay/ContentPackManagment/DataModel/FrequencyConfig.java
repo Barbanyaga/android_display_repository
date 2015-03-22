@@ -6,7 +6,7 @@ import org.joda.time.DateTime;
  * Created by barbanyaga on 15.03.2015.
  * Задает частоту запуска
  */
-public class FrecuencyConfig {
+public class FrequencyConfig {
     private DateTime dateStart;
 
     /***

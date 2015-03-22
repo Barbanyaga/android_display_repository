@@ -1,10 +1,15 @@
 package com.barbanyaga.androiddisplay.ContentPackManagment.DataModel;
 
-import java.util.ArrayList;
+import org.simpleframework.xml.ElementArray;
+import org.simpleframework.xml.ElementList;
+import org.simpleframework.xml.Root;
+import java.util.List;
 
 /**
  * Created by barbanyaga on 15.03.2015.
  */
+@Root
 public class MasterProject {
-    ArrayList<Project> Projects;
+    @ElementList
+    public List<Project> Projects;
 }

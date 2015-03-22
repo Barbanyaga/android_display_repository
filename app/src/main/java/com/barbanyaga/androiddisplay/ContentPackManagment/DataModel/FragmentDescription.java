@@ -1,12 +1,17 @@
 package com.barbanyaga.androiddisplay.ContentPackManagment.DataModel;
 
+import org.simpleframework.xml.Attribute;
+
 /**
  * Created by barbanyaga on 15.03.2015.
  */
 public class FragmentDescription {
     private FragmentType fragmentType;
+    @Attribute
     private int x;
+    @Attribute
     private int y;
+    @Attribute
     private int width;
     private int height;
     private Playlist playlist;

@@ -1,13 +1,16 @@
 package com.barbanyaga.androiddisplay.ContentPackManagment.DataModel;
 
-import android.provider.MediaStore;
+import org.simpleframework.xml.Element;
+import org.simpleframework.xml.ElementList;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by barbanyaga on 15.03.2015.
  */
 public class Project {
-    private FrecuencyConfig frecuencyConfig;
-    private ArrayList<FragmentDescription> fragmentDescriptions;
+    @Element
+    public FrequencyConfig frequencyConfig;
+    @ElementList
+    public List<FragmentDescription> fragmentDescriptions;
 }

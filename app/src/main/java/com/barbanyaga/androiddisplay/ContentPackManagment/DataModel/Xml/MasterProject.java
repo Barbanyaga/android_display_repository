@@ -6,5 +6,6 @@ import org.simpleframework.xml.Root;
  * Created by barbanyaga on 22.03.2015.
  */
 @Root
-public class Project {
+public class MasterProject {
+
 }
