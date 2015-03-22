@@ -68,14 +68,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cebb6928-5e67-4244-852e-ecce494f56d4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/DataModel/Xml/Project.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/simple_xml_2_7_1.xml" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\build\generated\source\buildConfig\test\debug\com\barbanyaga\androiddisplay\test\BuildConfig.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/model_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/model_data.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/tmp/dex/debug/inputList.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/tmp/dex/debug/inputList.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AndroidDisplay.iws" />
@@ -1343,7 +1335,11 @@
       <created>1426446304553</created>
       <updated>1426446304553</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Импорт XML&#10;">
+      <created>1427019732329</created>
+      <updated>1427019732329</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1429,7 +1425,8 @@
     <MESSAGE value="Динамическая загрузка Creeping Text" />
     <MESSAGE value="Динамическая элементов интерфейса&#10;" />
     <MESSAGE value="Модель данных" />
-    <option name="LAST_COMMIT_MESSAGE" value="Модель данных" />
+    <MESSAGE value="Импорт XML&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Импорт XML&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
