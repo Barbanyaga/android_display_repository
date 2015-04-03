@@ -1,7 +1,8 @@
 package com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.Xml;
 
+import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.Enums.FrequencyType;
 import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.FragmentDescription;
-import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.FragmentType;
+import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.Enums.FragmentType;
 import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.FrequencyConfig;
 import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.MasterProject;
 import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.Playlist;
@@ -13,7 +14,6 @@ import org.simpleframework.xml.core.Persister;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.ParseException;
 import java.util.ArrayList;
 
 /**
@@ -93,6 +93,8 @@ public class XmlSerializer {
 
             // Периодичность запуска проектов внутри мастре-проекта
             FrequencyConfig frequencyConfig1 = new FrequencyConfig();
+            frequencyConfig1.setFrequencyType(FrequencyType.EveryNMinutes);
+            frequencyConfig1.setFrequencyN(1);
 
             // Проекты
             Project project1 = new Project();

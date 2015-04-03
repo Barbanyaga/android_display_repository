@@ -1,5 +1,7 @@
 package com.barbanyaga.androiddisplay.ContentPackManagment.DataModel;
 
+import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.Enums.FragmentType;
+
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 
