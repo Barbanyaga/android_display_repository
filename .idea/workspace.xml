@@ -1434,7 +1434,11 @@
       <created>1428033492500</created>
       <updated>1428033492500</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Импорт XML&#10;">
+      <created>1428033501618</created>
+      <updated>1428033501618</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
