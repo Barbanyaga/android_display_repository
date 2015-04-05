@@ -69,7 +69,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cebb6928-5e67-4244-852e-ecce494f56d4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/Tasks/TaskCreator.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/Tasks/TaskCreator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AndroidDisplay.iws" />
@@ -106,8 +105,8 @@
       <file leaf-file-name="TaskCreator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/Tasks/TaskCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42079207" vertical-offset="0" max-vertical-offset="606">
-              <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.6452145" vertical-offset="0" max-vertical-offset="606">
+              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1416,7 +1415,11 @@
       <created>1428234297667</created>
       <updated>1428234297667</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Импорт XML&#10;">
+      <created>1428234394047</created>
+      <updated>1428234394047</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1946,8 +1949,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/Tasks/TaskCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42079207" vertical-offset="0" max-vertical-offset="606">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.6452145" vertical-offset="0" max-vertical-offset="606">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
