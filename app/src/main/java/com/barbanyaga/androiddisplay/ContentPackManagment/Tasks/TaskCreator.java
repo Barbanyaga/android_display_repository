@@ -12,6 +12,11 @@ public class TaskCreator {
     public TaskCreator() {
     }
 
+    /**
+     * Создаёт задачи на Мастер-проекта
+     * @param masterProject
+     * @return
+     */
     public List<Task> createTasks(MasterProject masterProject) {
         List<Task> tasks = null;
         return tasks;
