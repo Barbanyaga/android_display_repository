@@ -69,23 +69,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cebb6928-5e67-4244-852e-ecce494f56d4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/AppConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/Playing/Visualization/ContentPack.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/Playing/SmartPlayer.java" />
-      <change type="DELETED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\src\main\java\com\barbanyaga\androiddisplay\ContentPackManagment\Visualization\ContentPack.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/MainDisplayActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/MainDisplayActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/DataModel/Xml/XmlSerializer.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/DataModel/Xml/XmlSerializer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\src\main\java\com\barbanyaga\androiddisplay\ContentPackManagment\Tasks\Task.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/Playing/Tasks/Task.java" />
-      <change type="MOVED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\src\main\java\com\barbanyaga\androiddisplay\ContentPackManagment\Tasks\TaskCreator.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/Playing/Tasks/TaskCreator.java" />
-      <change type="MOVED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\src\main\java\com\barbanyaga\androiddisplay\ContentPackManagment\Visualization\ContentPackInflater.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/Playing/Visualization/ContentPackInflater.java" />
-      <change type="MOVED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\src\main\java\com\barbanyaga\androiddisplay\ContentPackManagment\Visualization\ContentPackPrimitives\BasePrimitiveElement.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/Playing/Visualization/ContentPackPrimitives/Base/BasePrimitiveElement.java" />
-      <change type="MOVED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\src\main\java\com\barbanyaga\androiddisplay\ContentPackManagment\Visualization\ContentPackPrimitives\CreepingTextElement.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/Playing/Visualization/ContentPackPrimitives/CreepingTextElement.java" />
-      <change type="MOVED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\src\main\java\com\barbanyaga\androiddisplay\ContentPackManagment\Visualization\ContentPackPrimitives\DisplayElementType.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/Playing/Visualization/ContentPackPrimitives/Base/DisplayElementType.java" />
-      <change type="MOVED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\src\main\java\com\barbanyaga\androiddisplay\ContentPackManagment\Visualization\ContentPackPrimitives\HtmlTextElement.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/Playing/Visualization/ContentPackPrimitives/HtmlTextElement.java" />
-      <change type="MOVED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\src\main\java\com\barbanyaga\androiddisplay\ContentPackManagment\Visualization\ContentPackPrimitives\IDisplayable.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/Playing/Visualization/ContentPackPrimitives/Base/IDisplayable.java" />
-      <change type="MOVED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\src\main\java\com\barbanyaga\androiddisplay\ContentPackManagment\Visualization\ContentPackPrimitives\VideoElement.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/Playing/Visualization/ContentPackPrimitives/VideoElement.java" />
-      <change type="MOVED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\src\main\java\com\barbanyaga\androiddisplay\ContentPackManagment\Visualization\DisplayManager.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/Playing/Visualization/DisplayManager.java" />
     </list>
     <ignored path="AndroidDisplay.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1313,7 +1297,11 @@
       <created>1428234481072</created>
       <updated>1428234481072</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Генератор задач (TaskCreator)">
+      <created>1429125662515</created>
+      <updated>1429125662516</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1685,6 +1673,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
           <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
