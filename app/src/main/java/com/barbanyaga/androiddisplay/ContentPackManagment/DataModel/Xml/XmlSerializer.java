@@ -1,5 +1,6 @@
 package com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.Xml;
 
+import com.barbanyaga.androiddisplay.AppConfig;
 import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.Enums.FrequencyType;
 import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.FragmentDescription;
 import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.Enums.FragmentType;
@@ -46,7 +47,7 @@ public class XmlSerializer {
     }
 
     /**
-     * Сохраняем в файл
+     * Сохраняем в файл (mock)
      *
      * @param filePath
      */
@@ -102,6 +103,90 @@ public class XmlSerializer {
             project1.frequencyConfig = frequencyConfig1;
             project1.fragmentDescriptions.add(fragmentDescription1);
             project1.fragmentDescriptions.add(fragmentDescription2);
+
+            // Мастер-проект
+            masterProject.Projects = new ArrayList<Project>();
+            masterProject.Projects.add(project1);
+
+            serializer.write(masterProject, file);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Сериализует реальный пример
+     *
+     * @param filePath
+     */
+    public static void serializeRealSample(String filePath) {
+        try {
+            File file = new File(filePath);
+
+            if (file.exists()) {
+                file.deleteOnExit();
+            }
+
+            Serializer serializer = new Persister();
+            MasterProject masterProject = new MasterProject();
+
+            // Файлы
+            PlaylistFile playlistFile1 = new PlaylistFile(AppConfig.defaultPath + "/Projects/1/Texts/1.txt");
+            PlaylistFile playlistFile2 = new PlaylistFile(AppConfig.defaultPath + "/Projects/1/Texts/2.txt");
+            PlaylistFile playlistFile3 = new PlaylistFile(AppConfig.defaultPath + "/Projects/1/Texts/3.txt");
+            PlaylistFile playlistFile4 = new PlaylistFile(AppConfig.defaultPath + "/Projects/1/Htmls/Weather.html");
+            PlaylistFile playlistFile5 = new PlaylistFile(AppConfig.defaultPath + "/Projects/1/Videos/Life.Cycles.2010.1080p.Rus.Eng.mp4");
+
+            // Плейлисты
+            Playlist playlistTexts = new Playlist();
+            playlistTexts.playlistFiles.add(playlistFile1);
+            playlistTexts.playlistFiles.add(playlistFile2);
+            playlistTexts.playlistFiles.add(playlistFile3);
+
+            Playlist playlistHtmls = new Playlist();
+            playlistHtmls.playlistFiles.add(playlistFile4);
+
+            Playlist playlistVideos = new Playlist();
+            playlistVideos.playlistFiles.add(playlistFile5);
+
+            // Фрагменты
+            FragmentDescription videoFragment = new FragmentDescription(); // 0, 60, 1920, 1080
+            videoFragment.setFragmentType(FragmentType.Video);
+            videoFragment.setX(0);
+            videoFragment.setY(60);
+            videoFragment.setWidth(1920);
+            videoFragment.setHeight(1080);
+            videoFragment.setPlaylist(playlistVideos);
+            FragmentDescription textFragment = new FragmentDescription(); // 20, 1080, 1920, 70, 0
+            textFragment.setFragmentType(FragmentType.CreepingText);
+            textFragment.setX(20);
+            textFragment.setY(1080);
+            textFragment.setWidth(1920);
+            textFragment.setHeight(70);
+            textFragment.setPlaylist(playlistTexts);
+            FragmentDescription htmlFragment = new FragmentDescription(); // 1700, 50, 600, 1200, 0
+            htmlFragment.setFragmentType(FragmentType.Html);
+            htmlFragment.setX(1700);
+            htmlFragment.setY(50);
+            htmlFragment.setWidth(600);
+            htmlFragment.setHeight(1200);
+            htmlFragment.setPlaylist(playlistHtmls);
+
+            // Периодичность запуска проектов внутри мастер-проекта
+            FrequencyConfig frequencyConfig1 = new FrequencyConfig();
+            frequencyConfig1.setFrequencyType(FrequencyType.EveryNMinutes);
+            frequencyConfig1.setFrequencyN(60);
+
+            // Проекты
+            Project project1 = new Project();
+            project1.fragmentDescriptions = new ArrayList<FragmentDescription>();
+            project1.frequencyConfig = frequencyConfig1;
+            project1.fragmentDescriptions.add(videoFragment);
+            project1.fragmentDescriptions.add(textFragment);
+            project1.fragmentDescriptions.add(htmlFragment);
 
             // Мастер-проект
             masterProject.Projects = new ArrayList<Project>();

@@ -1,4 +1,7 @@
-package com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives;
+package com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization.ContentPackPrimitives;
+
+import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization.ContentPackPrimitives.Base.BasePrimitiveElement;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization.ContentPackPrimitives.Base.DisplayElementType;
 
 /**
  * Created by barbanyaga on 23.02.2015.

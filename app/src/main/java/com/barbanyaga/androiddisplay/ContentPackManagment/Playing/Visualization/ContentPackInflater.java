@@ -1,4 +1,4 @@
-package com.barbanyaga.androiddisplay.ContentPackManagment.Visualization;
+package com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -8,9 +8,9 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
-import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.BasePrimitiveElement;
-import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.IDisplayable;
-import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.VideoElement;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization.ContentPackPrimitives.Base.BasePrimitiveElement;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization.ContentPackPrimitives.Base.IDisplayable;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization.ContentPackPrimitives.VideoElement;
 import com.barbanyaga.androiddisplay.Views.CreepingTextFragment;
 import com.barbanyaga.androiddisplay.Views.HtmlTextFragment;
 import com.barbanyaga.androiddisplay.Views.VideoFragment;
@@ -91,9 +91,9 @@ public class ContentPackInflater {
         FrameLayout frameLayout = new FrameLayout(activity);
         frameLayout.setId(id);
         frameLayout.setVisibility(element.getVisible() ? View.VISIBLE : View.GONE);
-        RelativeLayout.LayoutParams creepingLayoutsParams = new RelativeLayout.LayoutParams(element.getWidth(), element.getHeight());
-        creepingLayoutsParams.leftMargin = element.getMarginLeft();
-        creepingLayoutsParams.topMargin = element.getMarginTop();
-        mainRelativeLayout.addView(frameLayout, creepingLayoutsParams);
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(element.getWidth(), element.getHeight());
+        layoutParams.leftMargin = element.getMarginLeft();
+        layoutParams.topMargin = element.getMarginTop();
+        mainRelativeLayout.addView(frameLayout, layoutParams);
     }
 }

@@ -1,4 +1,4 @@
-package com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives;
+package com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization.ContentPackPrimitives.Base;
 
 /**
  * Created by barbanyaga on 18.02.2015.

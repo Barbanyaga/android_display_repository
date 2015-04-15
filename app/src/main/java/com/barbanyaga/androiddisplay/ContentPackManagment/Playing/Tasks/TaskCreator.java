@@ -1,4 +1,4 @@
-package com.barbanyaga.androiddisplay.ContentPackManagment.Tasks;
+package com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Tasks;
 
 import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.MasterProject;
 
@@ -6,7 +6,8 @@ import java.util.List;
 
 /**
  * Created by barbanyaga on 05.04.2015.
- * Создаём на основе мастер проекта список задач для выполнения
+ * Создаёт на основе мастер проекта список задач для выполнения
+ * Учитывает периодичность запуска проекта
  */
 public class TaskCreator {
     public TaskCreator() {

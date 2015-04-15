@@ -2,11 +2,11 @@ package com.barbanyaga.androiddisplay;
 
 import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.MasterProject;
 import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.Xml.XmlSerializer;
-import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPack;
-import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.DisplayManager;
-import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.CreepingTextElement;
-import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.HtmlTextElement;
-import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives.VideoElement;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization.ContentPack;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization.DisplayManager;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization.ContentPackPrimitives.CreepingTextElement;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization.ContentPackPrimitives.HtmlTextElement;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization.ContentPackPrimitives.VideoElement;
 import com.barbanyaga.androiddisplay.util.SystemUiHider;
 
 import android.annotation.TargetApi;
@@ -61,8 +61,9 @@ public class MainDisplayActivity extends Activity {
 
         MasterProject masterProject = null;
         try {
-            String filePath = "/sdcard/MediaBroadcast/Metadata.xml";
-            XmlSerializer.serialize(filePath);
+            AppConfig.createDefaultAppDir();
+            String filePath = AppConfig.defaultPath + "/Metadata.xml";
+            XmlSerializer.serializeRealSample(filePath);
             masterProject = XmlSerializer.deserialize(filePath);
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,9 +1,10 @@
-package com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackPrimitives;
+package com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization.ContentPackPrimitives.Base;
 
 /**
  * Created by barbanyaga on 21.02.2015.
  */
-public class BasePrimitiveElement implements IDisplayable {
+public abstract class BasePrimitiveElement implements IDisplayable {
+
     protected int MarginTop;
     protected int MarginLeft;
     protected int Width;

@@ -1,10 +1,7 @@
-package com.barbanyaga.androiddisplay.ContentPackManagment.Visualization;
+package com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization;
 
 import android.app.Activity;
 import android.widget.RelativeLayout;
-
-import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPack;
-import com.barbanyaga.androiddisplay.ContentPackManagment.Visualization.ContentPackInflater;
 
 /**
  * Created by barbanyaga on 08.03.2015.

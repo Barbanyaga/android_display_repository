@@ -1,4 +1,4 @@
-package com.barbanyaga.androiddisplay.ContentPackManagment.Tasks;
+package com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Tasks;
 
 import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.Project;
 
