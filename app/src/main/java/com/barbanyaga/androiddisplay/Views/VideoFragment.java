@@ -3,12 +3,9 @@ package com.barbanyaga.androiddisplay.Views;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Fragment;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -16,19 +13,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.PopupWindow;
 import android.widget.Toast;
 
+import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.Playlist;
 import com.barbanyaga.androiddisplay.R;
+import com.barbanyaga.androiddisplay.Views.Base.BaseFragment;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
+public class VideoFragment extends BaseFragment implements SurfaceHolder.Callback {
 
     private MediaPlayer mediaPlayer = null;
     private SurfaceView surfaceView = null;
@@ -36,7 +33,6 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
     private Button button_play_video;
     private View view;
     private ImageView bannerImage;
-    private String pathToFile = "/sdcard/Movies/Sample.mp4";
 
     public VideoFragment() {
         // Required empty public constructor
@@ -63,12 +59,12 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
     @Override
     public void surfaceCreated(SurfaceHolder surfaceHolder) {
         try {
-            File file = new File(pathToFile);
+            File file = new File(playlist.playlistFiles.get(0).getFilePath()); // TODO
             if (!file.exists()) {
                 throw new Resources.NotFoundException("Файл не найден!");
             }
 
-            mediaPlayer.setDataSource(pathToFile);
+            mediaPlayer.setDataSource(file.getPath());
             mediaPlayer.setDisplay(holder);
 
             mediaPlayer.prepare();
@@ -112,13 +108,5 @@ public class VideoFragment extends Fragment implements SurfaceHolder.Callback {
     @Override
     public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
 
-    }
-
-    public void setPathToFile(String pathToFile) {
-        this.pathToFile = pathToFile;
-    }
-
-    public String getPathToFile() {
-        return pathToFile;
     }
 }

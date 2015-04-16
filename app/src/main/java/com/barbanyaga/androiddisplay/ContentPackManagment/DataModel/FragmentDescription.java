@@ -12,9 +12,9 @@ public class FragmentDescription {
     @Attribute
     private FragmentType fragmentType;
     @Attribute
-    private int x;
+    private int left;
     @Attribute
-    private int y;
+    private int top;
     @Attribute
     private int width;
     @Attribute
@@ -30,20 +30,20 @@ public class FragmentDescription {
         this.fragmentType = fragmentType;
     }
 
-    public int getX() {
-        return x;
+    public int getLeft() {
+        return left;
     }
 
-    public void setX(int x) {
-        this.x = x;
+    public void setLeft(int left) {
+        this.left = left;
     }
 
-    public int getY() {
-        return y;
+    public int getTop() {
+        return top;
     }
 
-    public void setY(int y) {
-        this.y = y;
+    public void setTop(int top) {
+        this.top = top;
     }
 
     public int getWidth() {

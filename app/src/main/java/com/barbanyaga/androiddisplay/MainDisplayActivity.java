@@ -2,11 +2,7 @@ package com.barbanyaga.androiddisplay;
 
 import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.MasterProject;
 import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.Xml.XmlSerializer;
-import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization.ContentPack;
-import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization.DisplayManager;
-import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization.ContentPackPrimitives.CreepingTextElement;
-import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization.ContentPackPrimitives.HtmlTextElement;
-import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization.ContentPackPrimitives.VideoElement;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.SmartPlayer;
 import com.barbanyaga.androiddisplay.util.SystemUiHider;
 
 import android.annotation.TargetApi;
@@ -53,7 +49,6 @@ public class MainDisplayActivity extends Activity {
      * The instance of the {@link SystemUiHider} for this activity.
      */
     private SystemUiHider mSystemUiHider;
-    private DisplayManager mDisplayManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +58,7 @@ public class MainDisplayActivity extends Activity {
         try {
             AppConfig.createDefaultAppDir();
             String filePath = AppConfig.defaultPath + "/Metadata.xml";
-            XmlSerializer.serializeRealSample(filePath);
+            //XmlSerializer.serializeRealSample(filePath);
             masterProject = XmlSerializer.deserialize(filePath);
         } catch (Exception e) {
             e.printStackTrace();
@@ -73,14 +68,17 @@ public class MainDisplayActivity extends Activity {
 
         final View contentView = findViewById(R.id.fullscreen_content);
         final RelativeLayout mainDisplayLayout = (RelativeLayout) findViewById(R.id.main_display_layout);
-        mDisplayManager = new DisplayManager(this, mainDisplayLayout);
 
-        ContentPack contentPack = new ContentPack();
-        contentPack.displayElements.add(new VideoElement("/sdcard/Movies/Life.Cycles.2010.1080p.Rus.Eng.mp4", 0, 60, 1920, 1080, 0));
-        contentPack.displayElements.add(new CreepingTextElement("Проверка бегущей строки", 20, 1080, 1920, 70, 0));
-        contentPack.displayElements.add(new HtmlTextElement(1700, 50, 600, 1200, 0));
+        SmartPlayer smartPlayer = new SmartPlayer(this, mainDisplayLayout, masterProject);
+        smartPlayer.Play();
 
-        mDisplayManager.showContentPack(contentPack);
+//        mDisplayManager = new DisplayManager(this, mainDisplayLayout);
+//        ContentPack contentPack = new ContentPack();
+//        contentPack.displayElements.add(new VideoElement("/sdcard/Movies/Life.Cycles.2010.1080p.Rus.Eng.mp4", 0, 60, 1920, 1080, 0));
+//        contentPack.displayElements.add(new CreepingTextElement("Проверка бегущей строки", 20, 1080, 1920, 70, 0));
+//        contentPack.displayElements.add(new HtmlTextElement(1700, 50, 600, 1200, 0));
+//
+//        mDisplayManager.showContentPack(contentPack);
 
         // Set up an instance of SystemUiHider to control the system UI for
         // this activity.

@@ -1,5 +1,7 @@
 package com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.Xml;
 
+import android.util.Log;
+
 import com.barbanyaga.androiddisplay.AppConfig;
 import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.Enums.FrequencyType;
 import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.FragmentDescription;
@@ -42,6 +44,7 @@ public class XmlSerializer {
             return masterProject;
         } catch (Exception e) {
             e.printStackTrace();
+            Log.e("Desesialize xml", e.getMessage());
             throw new Exception(String.format("Ошибка разбора файла %s", filePath));
         }
     }
@@ -79,15 +82,15 @@ public class XmlSerializer {
             // Фрагменты
             FragmentDescription fragmentDescription1 = new FragmentDescription();
             fragmentDescription1.setFragmentType(FragmentType.Video);
-            fragmentDescription1.setX(100);
-            fragmentDescription1.setY(100);
+            fragmentDescription1.setLeft(100);
+            fragmentDescription1.setTop(100);
             fragmentDescription1.setWidth(200);
             fragmentDescription1.setHeight(320);
             fragmentDescription1.setPlaylist(playlist2);
             FragmentDescription fragmentDescription2 = new FragmentDescription();
             fragmentDescription2.setFragmentType(FragmentType.CreepingText);
-            fragmentDescription2.setX(150);
-            fragmentDescription2.setY(74);
+            fragmentDescription2.setLeft(150);
+            fragmentDescription2.setTop(74);
             fragmentDescription2.setWidth(51);
             fragmentDescription2.setHeight(127);
             fragmentDescription2.setPlaylist(playlist1);
@@ -155,22 +158,22 @@ public class XmlSerializer {
             // Фрагменты
             FragmentDescription videoFragment = new FragmentDescription(); // 0, 60, 1920, 1080
             videoFragment.setFragmentType(FragmentType.Video);
-            videoFragment.setX(0);
-            videoFragment.setY(60);
+            videoFragment.setLeft(0);
+            videoFragment.setTop(60);
             videoFragment.setWidth(1920);
             videoFragment.setHeight(1080);
             videoFragment.setPlaylist(playlistVideos);
             FragmentDescription textFragment = new FragmentDescription(); // 20, 1080, 1920, 70, 0
             textFragment.setFragmentType(FragmentType.CreepingText);
-            textFragment.setX(20);
-            textFragment.setY(1080);
+            textFragment.setLeft(20);
+            textFragment.setTop(1080);
             textFragment.setWidth(1920);
             textFragment.setHeight(70);
             textFragment.setPlaylist(playlistTexts);
             FragmentDescription htmlFragment = new FragmentDescription(); // 1700, 50, 600, 1200, 0
             htmlFragment.setFragmentType(FragmentType.Html);
-            htmlFragment.setX(1700);
-            htmlFragment.setY(50);
+            htmlFragment.setLeft(1700);
+            htmlFragment.setTop(50);
             htmlFragment.setWidth(600);
             htmlFragment.setHeight(1200);
             htmlFragment.setPlaylist(playlistHtmls);

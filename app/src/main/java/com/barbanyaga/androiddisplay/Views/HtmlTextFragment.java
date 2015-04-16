@@ -11,13 +11,14 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 
 import com.barbanyaga.androiddisplay.R;
+import com.barbanyaga.androiddisplay.Views.Base.BaseFragment;
 
 import java.net.URLEncoder;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HtmlTextFragment extends Fragment {
+public class HtmlTextFragment extends BaseFragment {
 
     private String htmlText = "<html><head><link rel='stylesheet' type='text/css' href='http://www.robotsidekick.com/test.css?rev=0' /></head><body><h1>Hello World</h1></body></html>";
     //private String htmlText = "";

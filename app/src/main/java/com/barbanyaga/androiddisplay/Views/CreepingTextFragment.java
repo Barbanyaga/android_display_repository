@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.barbanyaga.androiddisplay.R;
+import com.barbanyaga.androiddisplay.Views.Base.BaseFragment;
 
 
 /**
@@ -20,7 +21,7 @@ import com.barbanyaga.androiddisplay.R;
  * Use the {@link CreepingTextFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CreepingTextFragment extends Fragment {
+public class CreepingTextFragment extends BaseFragment {
 
     private String text = "Город Новочеркасск расположен на возвышенности, окружённой поймами степной реки Аксай и впадающей в неё реки Тузлов. В основании возвышенности лежат песчаники, сланцы, плотный известняк — ракушечник, в который на протяжении сотен лет попадала вода, образуя подземные скрытые пустоты.Река Тузлов разделяет город на две части. Восточнее расположен район посёлка Донской. Территория Новочеркасска граничит с Октябрьским и Аксайским сельскими районами.Преимуществом географического положения города является близость к крупнейшим промышленным и торговым центрам региона: Ростова-на-Дону расположен в 40 км, Шахты — в 36 км, Аксай — в 30 км, Новошахтинск — в 47 км, Батайск — в 53 км.Общая площадь городских земель составляет 13412,1 га.";
 

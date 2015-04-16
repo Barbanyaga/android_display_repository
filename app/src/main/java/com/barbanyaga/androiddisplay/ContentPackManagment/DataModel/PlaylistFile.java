@@ -20,4 +20,7 @@ public class PlaylistFile {
     public PlaylistFile(String filePath) {
         this.filePath = filePath;
     }
+
+    public PlaylistFile() {
+    }
 }
