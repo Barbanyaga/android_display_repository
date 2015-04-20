@@ -69,16 +69,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cebb6928-5e67-4244-852e-ecce494f56d4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/util/helpers/FileHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/Views/CreepingTextFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/Views/CreepingTextFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/MainDisplayActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/MainDisplayActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/DataModel/MasterProject.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/DataModel/MasterProject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/DataModel/Playlist.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/DataModel/Playlist.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/Playing/SmartPlayer.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/Playing/SmartPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/Views/VideoFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/Views/VideoFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/DataModel/Xml/XmlSerializer.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/DataModel/Xml/XmlSerializer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\_WORK\_Moonlight\AndroidDisplay\app\src\main\java\com\barbanyaga\androiddisplay\ContentPackManagment\Playing\Visualization\ProjectRender.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/barbanyaga/androiddisplay/ContentPackManagment/Playing/Visualization/ProjectRenderer.java" />
     </list>
     <ignored path="AndroidDisplay.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1382,7 +1373,11 @@
       <created>1429159087478</created>
       <updated>1429159087478</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="* контент для проигрывания берется из файла">
+      <created>1429558566776</created>
+      <updated>1429558566776</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
