@@ -58,7 +58,7 @@ public class MainDisplayActivity extends Activity {
         try {
             AppConfig.createDefaultAppDir();
             String filePath = AppConfig.defaultPath + "/Metadata.xml";
-            //XmlSerializer.serializeRealSample(filePath);
+            XmlSerializer.serializeRealSample(filePath);
             masterProject = XmlSerializer.deserialize(filePath);
         } catch (Exception e) {
             e.printStackTrace();

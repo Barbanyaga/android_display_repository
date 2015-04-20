@@ -14,4 +14,17 @@ public class Playlist {
     @ElementList
     public List<PlaylistFile> playlistFiles = new ArrayList<PlaylistFile>();
 
+    /**
+     * Возвращает следующий элемент плейлиста
+     * @return
+     */
+    public PlaylistFile getNextFile() {
+        if (playlistFiles.size() > 0) {
+            PlaylistFile nextFile = playlistFiles.get(0);
+            playlistFiles.remove(0);
+            return nextFile;
+        }
+
+        return null;
+    }
 }

@@ -3,7 +3,7 @@ package com.barbanyaga.androiddisplay.ContentPackManagment.Playing;
 import android.widget.RelativeLayout;
 
 import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.Project;
-import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization.ProjectRender;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization.ProjectRenderer;
 import com.barbanyaga.androiddisplay.MainDisplayActivity;
 
 /**
@@ -18,9 +18,9 @@ public class SmartPlayer {
     /**
      * Умный проигрыватель
      *
-     * @param mainDisplayActivity
-     * @param mainDisplayLayout
-     * @param masterProject
+     * @param mainDisplayActivity главная активность
+     * @param mainDisplayLayout главная разметка активности
+     * @param masterProject мастер-проект для отрисовки
      */
     public SmartPlayer(MainDisplayActivity mainDisplayActivity, RelativeLayout mainDisplayLayout, com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.MasterProject masterProject) {
         this.mainDisplayActivity = mainDisplayActivity;
@@ -29,8 +29,8 @@ public class SmartPlayer {
     }
 
     public void Play() {
-        for (Project project : masterProject.Projects) {
-            ProjectRender projectRender = new ProjectRender(mainDisplayActivity, mainDisplayLayout, project);
+        for (Project project : masterProject.AdProjects) {
+            ProjectRenderer projectRender = new ProjectRenderer(mainDisplayActivity, mainDisplayLayout, project);
             projectRender.inflate();
         }
     }

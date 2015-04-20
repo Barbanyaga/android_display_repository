@@ -10,6 +10,7 @@ import android.widget.RelativeLayout;
 
 import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.FragmentDescription;
 import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.Project;
+import com.barbanyaga.androiddisplay.Views.Base.BaseFragment;
 import com.barbanyaga.androiddisplay.Views.CreepingTextFragment;
 import com.barbanyaga.androiddisplay.Views.HtmlTextFragment;
 import com.barbanyaga.androiddisplay.Views.VideoFragment;
@@ -18,14 +19,14 @@ import com.barbanyaga.androiddisplay.Views.VideoFragment;
  * Created by barbanyaga on 18.02.2015.
  * Project render inflate main relative layouts with project information
  */
-public class ProjectRender {
+public class ProjectRenderer {
 
     private final FragmentTransaction fragmentTransaction;
     private Activity activity;
     private Project project;
     private RelativeLayout mainRelativeLayout;
 
-    public ProjectRender(Activity activity, RelativeLayout mainDisplayLayout, Project project) {
+    public ProjectRenderer(Activity activity, RelativeLayout mainDisplayLayout, Project project) {
         this.mainRelativeLayout = mainDisplayLayout;
         this.project = project;
         this.activity = activity;
@@ -52,12 +53,12 @@ public class ProjectRender {
      * @param fragmentDescription
      * @return
      */
-    private ProjectRender addDisplayFragment(FragmentDescription fragmentDescription) {
+    private ProjectRenderer addDisplayFragment(FragmentDescription fragmentDescription) {
 
         int newId = View.generateViewId();
         addFrameLayout(newId, fragmentDescription);
 
-        Fragment fragment = null;
+        BaseFragment fragment = null;
 
         switch (fragmentDescription.getFragmentType()) {
             case CreepingText:
@@ -68,10 +69,11 @@ public class ProjectRender {
                 break;
             case Video:
                 VideoFragment newVideoFragment = new VideoFragment();
-                newVideoFragment.setPlaylist(fragmentDescription.getPlaylist());
                 fragment = newVideoFragment;
                 break;
         }
+
+        fragment.setPlaylist(fragmentDescription.getPlaylist());
 
         if (fragment != null) {
             fragmentTransaction.add(newId, fragment);

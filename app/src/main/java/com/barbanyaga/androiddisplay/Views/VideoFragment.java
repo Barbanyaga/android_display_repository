@@ -30,9 +30,7 @@ public class VideoFragment extends BaseFragment implements SurfaceHolder.Callbac
     private MediaPlayer mediaPlayer = null;
     private SurfaceView surfaceView = null;
     private SurfaceHolder holder = null;
-    private Button button_play_video;
     private View view;
-    private ImageView bannerImage;
 
     public VideoFragment() {
         // Required empty public constructor
@@ -49,17 +47,13 @@ public class VideoFragment extends BaseFragment implements SurfaceHolder.Callbac
         holder.addCallback(this);
 
         mediaPlayer = new MediaPlayer();
-
-// Баннер
-        LayoutInflater inflater2 = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
         return view;
     }
 
     @Override
     public void surfaceCreated(SurfaceHolder surfaceHolder) {
         try {
-            File file = new File(playlist.playlistFiles.get(0).getFilePath()); // TODO
+            File file = new File(playlist.playlistFiles.get(0).getFilePath()); // TODO проигрывание плейлистов
             if (!file.exists()) {
                 throw new Resources.NotFoundException("Файл не найден!");
             }
@@ -68,7 +62,7 @@ public class VideoFragment extends BaseFragment implements SurfaceHolder.Callbac
             mediaPlayer.setDisplay(holder);
 
             mediaPlayer.prepare();
-            mediaPlayer.seekTo(8*60*1000);
+            mediaPlayer.seekTo(1*60*1000);
 /*
  // Играемся с размером видео
 
