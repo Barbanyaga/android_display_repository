@@ -1377,7 +1377,11 @@
       <created>1429558566776</created>
       <updated>1429558566776</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="* контент для проигрывания берется из файла">
+      <created>1429558632872</created>
+      <updated>1429558632872</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
