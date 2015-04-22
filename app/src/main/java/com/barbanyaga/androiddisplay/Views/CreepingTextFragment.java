@@ -1,7 +1,5 @@
 package com.barbanyaga.androiddisplay.Views;
 
-import android.app.Activity;
-import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -12,7 +10,7 @@ import android.widget.TextView;
 import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.PlaylistFile;
 import com.barbanyaga.androiddisplay.R;
 import com.barbanyaga.androiddisplay.Views.Base.BaseFragment;
-import com.barbanyaga.androiddisplay.util.helpers.FileHelper;
+import com.barbanyaga.androiddisplay.util.helpers.FileHelpers.FileHelper;
 
 import java.io.File;
 
@@ -42,5 +40,10 @@ public class CreepingTextFragment extends BaseFragment {
         }
 
         return view;
+    }
+
+    @Override
+    public void stop() {
+
     }
 }

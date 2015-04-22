@@ -62,7 +62,7 @@ public class VideoFragment extends BaseFragment implements SurfaceHolder.Callbac
             mediaPlayer.setDisplay(holder);
 
             mediaPlayer.prepare();
-            mediaPlayer.seekTo(1*60*1000);
+            mediaPlayer.seekTo(1 * 60 * 1000);
 /*
  // Играемся с размером видео
 
@@ -101,6 +101,11 @@ public class VideoFragment extends BaseFragment implements SurfaceHolder.Callbac
 
     @Override
     public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
+        mediaPlayer.stop();
+    }
 
+    @Override
+    public void stop() {
+        mediaPlayer.stop();
     }
 }

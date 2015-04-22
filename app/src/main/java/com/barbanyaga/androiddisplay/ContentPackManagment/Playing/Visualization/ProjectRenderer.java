@@ -2,6 +2,7 @@ package com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.support.annotation.IdRes;
 import android.view.View;
@@ -21,20 +22,21 @@ import com.barbanyaga.androiddisplay.Views.VideoFragment;
  */
 public class ProjectRenderer {
 
-    private final FragmentTransaction fragmentTransaction;
     private Activity activity;
     private Project project;
     private RelativeLayout mainRelativeLayout;
+    private FragmentTransaction fragmentTransaction;
 
-    public ProjectRenderer(Activity activity, RelativeLayout mainDisplayLayout, Project project) {
+    public ProjectRenderer(Activity activity, RelativeLayout mainDisplayLayout) {
         this.mainRelativeLayout = mainDisplayLayout;
-        this.project = project;
+
         this.activity = activity;
-        this.fragmentTransaction = activity.getFragmentManager().beginTransaction();
     }
 
-    public void inflate() {
-
+    public void inflate(Project project) {
+        FragmentManager fragmentManager = activity.getFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        this.project = project;
         // add creeping text
         for (FragmentDescription fragmentDescription : project.fragmentDescriptions) {
             addDisplayFragment(fragmentDescription);

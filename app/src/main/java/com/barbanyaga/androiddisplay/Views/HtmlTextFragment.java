@@ -49,5 +49,9 @@ public class HtmlTextFragment extends BaseFragment {
         return view;
     }
 
+    @Override
+    public void stop() {
+
+    }
 
 }

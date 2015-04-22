@@ -1,4 +1,4 @@
-package com.barbanyaga.androiddisplay.util.helpers;
+package com.barbanyaga.androiddisplay.util.helpers.FileHelpers;
 
 import java.io.BufferedReader;
 import java.io.File;

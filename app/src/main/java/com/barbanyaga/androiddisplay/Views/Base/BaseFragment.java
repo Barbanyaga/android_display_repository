@@ -17,4 +17,9 @@ public abstract class BaseFragment extends Fragment {
     public void setPlaylist(Playlist playlist) {
         this.playlist = playlist;
     }
+
+    /**
+     * Остановить проигрывание
+     */
+    public abstract void stop();
 }

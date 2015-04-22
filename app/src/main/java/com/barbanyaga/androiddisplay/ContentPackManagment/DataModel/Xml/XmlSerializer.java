@@ -165,7 +165,7 @@ public class XmlSerializer {
             videoFragment0.setTop(60);
             videoFragment0.setWidth(1920);
             videoFragment0.setHeight(1080);
-            videoFragment0.setPlaylist(playlistVideos);
+            videoFragment0.setPlaylist(playlistMainVideo);
 
             FragmentDescription videoFragment = new FragmentDescription(); // 0, 60, 1920, 1080
             videoFragment.setFragmentType(FragmentType.Video);
@@ -213,7 +213,7 @@ public class XmlSerializer {
 
             // Мастер-проект
             MasterProject masterProject = new MasterProject();
-            masterProject.MainProject = project1;
+            masterProject.MainProject = mainProject;
             masterProject.AdProjects = new ArrayList<Project>();
             masterProject.AdProjects.add(project1);
 
