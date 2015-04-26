@@ -4,6 +4,8 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.Project;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Tasks.ITaskScheduleListener;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Tasks.TaskScheduler;
 import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Visualization.ProjectRenderer;
 import com.barbanyaga.androiddisplay.MainDisplayActivity;
 import com.barbanyaga.androiddisplay.util.helpers.TimerHelpers.SystemTimerAndroid;
@@ -16,17 +18,18 @@ import java.util.TimerTask;
  * Created by barbanyaga on 14.04.2015.
  * Получает мастер проект и отображает на экране монитора с учётом расписания воспроизведения
  */
-public class SmartPlayer {
+public class SmartPlayer implements ITaskScheduleListener {
     private final MainDisplayActivity mainDisplayActivity;
     private final RelativeLayout mainDisplayLayout;
     private final ProjectRenderer projectRender;
     com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.MasterProject masterProject;
+    private TaskScheduler taskScheduler;
 
     /**
      * Умный проигрыватель
      *
      * @param mainDisplayActivity главная активность
-     * @param mainDisplayLayout   главная разметка активности
+     * @param mainDisplayLayout   разметка активности для отрисовки мастер-проекта
      * @param masterProject       мастер-проект для отрисовки
      */
     public SmartPlayer(MainDisplayActivity mainDisplayActivity, RelativeLayout mainDisplayLayout, com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.MasterProject masterProject) {
@@ -36,33 +39,18 @@ public class SmartPlayer {
         this.projectRender = new ProjectRenderer(mainDisplayActivity, mainDisplayLayout);
     }
 
-    public void Play() {
+    public void play() {
+
+        taskScheduler = new TaskScheduler(masterProject.AdProjects, this);
+        taskScheduler.start();
 
         projectRender.inflate(masterProject.MainProject);
-
-//        for (Project project : masterProject.AdProjects) {
-//            ProjectRenderer projectRender = new ProjectRenderer(mainDisplayActivity, mainDisplayLayout, project);
-//            projectRender.inflate();
-//        }
-
-        SystemTimerTask showProjectTask = new ShowProjectTask(masterProject.AdProjects.get(0));
-        SystemTimerAndroid systemTimerAndroid = new SystemTimerAndroid();
-        systemTimerAndroid.addListener(showProjectTask);
     }
 
-    class ShowProjectTask extends SystemTimerTask {
-        Project project;
-
-        ShowProjectTask(Project project) {
-            this.project = project;
-        }
-
-        public void run() {
-            mainDisplayLayout.removeAllViews();
-
-            projectRender.inflate(project);
-
-            setCancel(true);
-        }
+    @Override
+    public void needToPlay(Project project) {
+        mainDisplayLayout.removeAllViews();
+        projectRender.inflate(project);
     }
+
 }

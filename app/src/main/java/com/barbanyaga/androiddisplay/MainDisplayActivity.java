@@ -55,6 +55,8 @@ public class MainDisplayActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         MasterProject masterProject = null;
+
+        //region MasterProject's deserialization
         try {
             AppConfig.createDefaultAppDir();
             String filePath = AppConfig.defaultPath + "/Metadata.xml";
@@ -63,23 +65,23 @@ public class MainDisplayActivity extends Activity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        //endregion
 
         setContentView(R.layout.activity_dynamic_main_display);
+        initSystemUiHider();
 
-        final View contentView = findViewById(R.id.fullscreen_content);
         final RelativeLayout mainDisplayLayout = (RelativeLayout) findViewById(R.id.main_display_layout);
-
         SmartPlayer smartPlayer = new SmartPlayer(this, mainDisplayLayout, masterProject);
-        smartPlayer.Play();
+        smartPlayer.play();
+    }
 
-//        mDisplayManager = new DisplayManager(this, mainDisplayLayout);
-//        ContentPack contentPack = new ContentPack();
-//        contentPack.displayElements.add(new VideoElement("/sdcard/Movies/Life.Cycles.2010.1080p.Rus.Eng.mp4", 0, 60, 1920, 1080, 0));
-//        contentPack.displayElements.add(new CreepingTextElement("Проверка бегущей строки", 20, 1080, 1920, 70, 0));
-//        contentPack.displayElements.add(new HtmlTextElement(1700, 50, 600, 1200, 0));
-//
-//        mDisplayManager.showContentPack(contentPack);
-
+    /**
+     * Логика скрывания/показывания элементов управления (обеспечивает полноэкранный режим для контента)
+     * 1) панель информации (сверху)
+     * 2) панель упрваления (снизу, < o [])
+     */
+    private void initSystemUiHider() {
+        final View contentView = findViewById(R.id.fullscreen_content);
         // Set up an instance of SystemUiHider to control the system UI for
         // this activity.
         mSystemUiHider = SystemUiHider.getInstance(this, contentView, HIDER_FLAGS);
@@ -133,7 +135,6 @@ public class MainDisplayActivity extends Activity {
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
     }
-
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {

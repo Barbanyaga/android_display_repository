@@ -1,7 +1,12 @@
 package com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Tasks;
 
 import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.MasterProject;
+import com.barbanyaga.androiddisplay.ContentPackManagment.DataModel.Project;
+import com.barbanyaga.androiddisplay.ContentPackManagment.Playing.Tasks.Collections.TaskCollection;
 
+import org.joda.time.DateTime;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,11 +20,25 @@ public class TaskCreator {
 
     /**
      * Создаёт задачи на Мастер-проекта
-     * @param masterProject
+     *
+     * @param projects
      * @return
      */
-    public List<Task> createTasks(MasterProject masterProject) {
-        List<Task> tasks = null;
-        return tasks;
+    public TaskCollection createTasks(List<Project> projects) {
+        List<Task> taskList = new ArrayList<Task>();
+
+        DateTime dateNow = DateTime.now();
+        final DateTime playDate = dateNow.plusSeconds(10);// TODO: Фейковая дата для проигрывания - заменить на реальную
+
+        for (Project project : projects) {
+            Task newTask = new Task();
+            newTask.setProject(project);
+            newTask.setDateShow(playDate); // TODO
+
+            taskList.add(newTask);
+        }
+
+        TaskCollection taskCollection = new TaskCollection(taskList);
+        return taskCollection;
     }
 }

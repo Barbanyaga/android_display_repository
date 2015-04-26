@@ -38,9 +38,7 @@
                     android:layout_marginLeft="1300px"
                     android:layout_width="600px"
                     android:layout_height="1200px"
-
                     />
                 -->
-        android:layout_width=""
     </RelativeLayout>
 </LinearLayout>

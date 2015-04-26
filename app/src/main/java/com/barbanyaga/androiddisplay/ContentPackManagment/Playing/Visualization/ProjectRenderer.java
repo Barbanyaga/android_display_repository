@@ -33,6 +33,10 @@ public class ProjectRenderer {
         this.activity = activity;
     }
 
+    /**
+     * Заполняет разметку фрагментами проекта
+     * @param project
+     */
     public void inflate(Project project) {
         FragmentManager fragmentManager = activity.getFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();

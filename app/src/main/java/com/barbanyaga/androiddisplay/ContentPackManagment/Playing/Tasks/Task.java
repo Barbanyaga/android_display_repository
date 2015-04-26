@@ -17,4 +17,22 @@ public class Task {
      * Проект для отображения
      */
     Project project;
+
+
+    public DateTime getDateShow() {
+        return dateShow;
+    }
+
+    public void setDateShow(DateTime dateShow) {
+        this.dateShow = dateShow;
+    }
+
+    public Project getProject() {
+        return project;
+    }
+
+    public void setProject(Project project) {
+        this.project = project;
+    }
+
 }

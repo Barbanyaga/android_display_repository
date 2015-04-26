@@ -18,6 +18,9 @@
         android:marqueeRepeatLimit="marquee_forever"
         android:focusable="false"
         android:scrollHorizontally="true"
-        />
+        android:shadowColor="@android:color/darker_gray"
+        android:shadowRadius="3"
+        android:shadowDx="0"
+        android:shadowDy="0" />
 
 </FrameLayout>

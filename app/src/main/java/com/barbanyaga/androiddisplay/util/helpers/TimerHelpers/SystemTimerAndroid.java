@@ -16,7 +16,7 @@ public class SystemTimerAndroid {
 
     public SystemTimerAndroid() {
         clockTimer = new Timer();
-        clockTimer.schedule(new Task(), 10000, 500000);
+        clockTimer.schedule(new Task(), 1 * 1000, 1 * 1000);
     }
 
     private class Task extends TimerTask {
