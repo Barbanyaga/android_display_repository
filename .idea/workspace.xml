@@ -1588,7 +1588,11 @@
       <created>1430040419745</created>
       <updated>1430040419745</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="* разработка планировщика">
+      <created>1430040449150</created>
+      <updated>1430040449150</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
